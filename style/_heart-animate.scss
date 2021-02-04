@@ -1,0 +1,29 @@
+//!------------------專屬[ 愛心 ]svg動畫設定-start------------------
+
+.heart path {
+  stroke-dasharray: 1560; //?試出填滿整個邊框[ try最小數值 ]
+  stroke-dashoffset: 0;
+}
+//?啟用[ 動畫 ]設定
+.heart:hover path {
+  animation: animate-heart 2s linear forwards;
+}
+
+@keyframes animate-heart {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1560; //?繞完一整圈與[ stroke-dasharray同 ]
+  }
+  80% {
+    stroke-dashoffset: 3120; //??一整圈的2倍=接續繞第二圈
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 3120;
+    fill: #31e8ff;
+  }
+}
+
+//!------------------專屬[ 愛心 ]svg動畫設定-end------------------

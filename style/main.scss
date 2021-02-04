@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #06181f;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 200px;
+  path {
+    fill: transparent;
+    stroke-width: 10; //?為svg圖[ 添加邊框 ]粗細
+    stroke: #31e8ff; //?為svg圖[ 邊框上色 ]顏色
+  }
+}
+
+@import "heart-animate"; //!-----專屬[ 愛心 ]svg動畫設定
+
+@import "scooter-animate"; //*-----專屬[ 摩托 ]svg動畫設定-start
+
+@import "sun-animate"; //todo------專屬[ 太陽 ]svg動畫設定-start

@@ -1,0 +1,29 @@
+//todo------------------專屬[ 太陽 ]svg動畫設定-start------------------
+
+.sun path {
+  stroke-dasharray: 3700; //?試出填滿整個邊框[ try最小數值 ]
+  stroke-dashoffset: 0;
+}
+//?啟用[ 動畫 ]設定
+.sun:hover path {
+  animation: animate-sun 3s linear forwards;
+}
+
+@keyframes animate-sun {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 3700; //?繞完一整圈與[ stroke-dasharray同 ]
+  }
+  80% {
+    stroke-dashoffset: 7400; //??一整圈的2倍=接續繞第二圈
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 7400;
+    fill: #31e8ff;
+  }
+}
+
+//todo------------------專屬[ 太陽 ]svg動畫設定-end------------------
